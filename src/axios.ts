@@ -1,11 +1,13 @@
 import axios from "axios";
 
-// Criar uma instância do Axios com base URL padrão
+// Acessar a variável de ambiente usando o `process.env.VUE_APP_BACKEND_URL`
+const baseURL = process.env.VUE_APP_BACKEND_URL || "http://localhost:3000/api";
+console.log("Base URL:", baseURL); // Para depuração
+
 const instance = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL || "http://localhost:3000/api",
+  baseURL,
 });
 
-// Interceptar requisições e adicionar o token JWT, se disponível
 instance.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
