@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "esnext",  // Recomendo "esnext" em vez de "es5" para suporte moderno
+    "module": "esnext",  // Para Vue 3 e importações modernas
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": ["webpack-env"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue", // Incluir arquivos .vue
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+, "src/services/openaiService.js"  ],
+  "exclude": ["node_modules"]
+}
