@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Acessar a variável de ambiente usando o `process.env.VUE_APP_BACKEND_URL`
+// Acessar a variável de ambiente usando o `process.env.VUE_APP_BACKEND_URL atualizando`
 const baseURL = process.env.VUE_APP_BACKEND_URL || "http://localhost:3000/api";
 console.log("Base URL:", baseURL); // Para depuração
 
